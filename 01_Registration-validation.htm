@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="01_Registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="box">
+        <form action="#" class="">
+            <div class="heading">
+                <h1>Registration Form</h1>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">First Name </label>
+                </div>
+                <div class="col2">
+                    <input type="text" placeholder="Enter your Name" class="fname" onkeyup="return firstName_reg_ex()">
+                </div>
+                <div class="col3">
+                    <span class="msg1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col1">
+                    <label for="">Last Name </label>
+                </div>
+                <div class="col2">
+                    <input type="text" placeholder="Enter your Last Name" class="lname"
+                        onkeyup="return lastName_reg_ex()">
+                </div>
+                <div class="col3">
+                    <span class="msg2"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Address </label>
+                </div>
+                <div class="col2">
+                    <textarea name="" id="addr" cols="32" rows="5" placeholder="Enter Address....." maxlength="100"
+                        onkeyup="return address_length()"></textarea>
+                </div>
+                <div class="col3">
+                    <span class="msg3"></span>
+                    <span class="msg4"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Date of Birth </label>
+                </div>
+                <div class="col2">
+                    <input type="date" name="" id="cdate">
+                </div>
+                <div class="col3">
+                    <span class="msg5"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Gender</label>
+                </div>
+                <div class="col2">
+                    <input type="radio" name="gen" id="male">Male
+                    <input type="radio" name="gen" id="fmale">Female
+                    <input type="radio" name="gen" id="other">Other
+
+                </div>
+                <div class="col3">
+                    <span class="msg6"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Mobile Number</label>
+                </div>
+                <div class="col2">
+                    <input type="text" id="mno" placeholder="Enter Mobile Number" onkeyup="return mnum_reg_exp()"
+                        onblur="return mobile_num_len()">
+                </div>
+                <div class="col3">
+                    <span class="msg7"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Pin Number</label>
+                </div>
+                <div class="col2">
+                    <input type="text" id="pin" placeholder="Enter Pin Number" onkeyup="return pin_num()" onblur="">
+                </div>
+                <div class="col3">
+                    <span class="msg8"></span>
+                    <span class="msg9"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col1">
+                    <label for="">Password</label>
+                </div>
+                <div class="col2">
+                    <div class="col2-eye">
+                        <input type="password" id="pass" placeholder="Enter password Number" onkeyup=""
+                            onblur="">
+                        <span class="fa-solid fa-eye pass-logo" onclick="show_pass()"></span>
+                    </div>
+                </div>
+                <div class="col3">
+                    <span class="msg10"></span>
+                    <span class="msg11"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col1">
+                    <label for="">Conform Password</label>
+                </div>
+                <div class="col2">
+                    <div class="col2-eye">
+                        <input type="password" id="cpass" placeholder="Enter conform password Number" onkeyup=""
+                            onblur="">
+                        <span class="fa-solid fa-eye pass-logo" onclick="return show_pass_2()"></span>
+                    </div>
+                </div>
+                <div class="col3">
+                    <span class="msg12"></span>
+                    <span class="msg13"></span>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row">
+                <div class="col1">
+                </div>
+                <div class="col2">
+                    <input type="submit" value="Submit" class="btn" onclick="return validation_page()">
+                </div>
+                <div class="col3">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="01_Registration.js"></script>
+    <script src="01_Regular_expretion.js"></script>
+</body>
+
+</html>

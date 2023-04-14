@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 1000px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.416);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: 1s all ease;
+        }
+
+        .header-fixed {
+            background-color: rgba(255, 128, 0 , 0.539);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .container {
+            margin: 0px 80px;
+        }
+
+        .header .header-p {
+            padding: 50px 0px;
+        }
+
+        .header .header-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        /* ---logo----- */
+        .header .header-flex .logo {
+            flex: 1;
+        }
+
+        .header .header-flex .logo h1 {
+            font-size: 40px;
+            text-shadow: 0 0 3px black;
+            color: white;
+        }
+
+        .header .header-flex .logo span {
+            color: red;
+        }
+
+        /* ----- nav class start------ */
+        .header .header-flex .nav {
+            flex: 2;
+        }
+
+        .header .header-flex .nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .header .header-flex .nav a {
+            color: white;
+            /* text-shadow: 1px 1px 3px black; */
+            -webkit-text-stroke:1px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            transition: 1s all ease;
+            font-size: 18px;
+        }
+
+        .header .header-flex .nav a:hover {
+            color: tomato;
+        }
+
+
+        .header .header-flex .theme {
+            color: white;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        /* -----theme class added----- */
+        .dark-theme {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start of Header -->
+    <section class="header">
+        <div class="container">
+            <div class="header-p">
+                <div class="header-flex">
+                    <div class="logo">
+                        <h1>Vinod<span>K</span></h1>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="theme">
+                        <span class="fa-solid fa-moon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function change_header() {
+            let header_fixed = document.querySelector(".header");
+            let current = window.scrollY;
+
+            if (current > 0) {
+                header_fixed.classList.add("header-fixed");
+            }
+            else{
+                header_fixed.classList.remove("header-fixed");
+            }
+        }
+        window.addEventListener("scroll",change_header);
+    </script>
+</body>
+
+</html>

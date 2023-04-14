@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            margin: 50px 0px 0px 50px;
+        }
+
+        .box {
+            margin: 50px 0px 0px 50px;
+            padding: 50px;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Set color : </label>
+        <input type="color" name="" id="col">&nbsp;
+        <button type="submit" id="btn" onclick="return change_color()">Set color</button>
+        <div class="box"></div>
+    </form>
+    <script>
+        function change_color() {
+            let col = document.getElementById("col");
+            let box = document.querySelector(".box");
+            box.style.backgroundColor = col.value;
+            return false
+        }
+    </script>
+</body>
+
+</html>

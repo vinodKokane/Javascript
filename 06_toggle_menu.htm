@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.682);
+            width: 100%;
+        }
+
+        .container {
+            margin: 0px 80px;
+        }
+
+        .header .header-p {
+            padding: 50px 0px;
+        }
+
+        .header .header-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        /* -----logo------ */
+        .header .header-flex .logo {
+            flex: 1;
+        }
+
+        .header .header-flex .logo h1 {
+            font-size: 40px;
+            color: turquoise;
+        }
+
+        .header .header-flex .logo span {
+            color: yellow;
+        }
+
+        /* -----nav-------- */
+        .header .header-flex .nav {
+            flex: 3;
+        }
+
+        .header .header-flex .nav .nav-menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .header .header-flex .nav .nav-menu a {
+            color: white;
+            font-size: 20px;
+            transition: 1s all ease;
+        }
+
+        .header .header-flex .nav .nav-menu a:hover {
+            color: red;
+        }
+
+        /*------- theme -----------*/
+        .header .header-flex .theme {
+            flex: 0.5;
+            color: white;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header .header-flex .theme .bar {
+            width: 30px;
+            height: 30px;
+            color: black;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .header .header-flex .theme .bar:focus-visible {
+            outline: none;
+        }
+
+        @media (max-width:576px) {
+            .container {
+                margin: 0px 20px;
+            }
+
+            .header .header-flex .nav {
+                display: none;
+            }
+
+            .header .header-flex .theme .bar {
+                display: block;
+                position: relative;
+            }
+
+            .header .header-flex .nav-menu-bar {
+                display: block;
+                width: 40%;
+                height: auto;
+                position: absolute;
+                top: 25.5%;
+                right: 0;
+                background-color: black;
+                text-align: center;
+            }
+
+            .header .header-flex .nav-menu-bar li {
+                border: 1px solid white;
+            }
+
+            .header .header-flex .nav-menu-bar .nav-menu a {
+                color: white;
+            }
+
+            .header .header-flex .nav-menu-bar .nav-menu {
+                flex-direction: column;
+            }
+
+            .header .header-flex .nav-menu-bar li::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: black;
+                /* position: absolute; */
+            }
+
+            .header .header-flex .nav .nav-menu {
+                gap: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start of header  -->
+    <section class="header">
+        <div class="container">
+            <div class="header-p">
+                <div class="header-flex">
+                    <div class="logo">
+                        <h1>vinod<span>K</span></h1>
+                    </div>
+                    <div class="nav">
+                        <ul class="nav-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Cotact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="theme">
+                        <span class="fa-solid fa-moon"></span>
+                        <button class="bar">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of header -->
+
+    <script>
+        let btn = document.querySelector(".bar");
+        let nav_menu = document.querySelector(".nav");
+
+        btn.addEventListener("click", function () {
+            nav_menu.classList.toggle("nav-menu-bar");
+        })
+
+    </script>
+</body>
+
+</html>
